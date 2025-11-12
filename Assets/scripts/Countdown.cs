@@ -16,4 +16,9 @@ public class Countdown : MonoBehaviour
         int seconds = Mathf.FloorToInt(remainingTime % 60);
         countdownText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
+
+    public void SubtractTime(float t)
+    {
+        remainingTime = remainingTime - t;
+    }
 }
